@@ -1,5 +1,5 @@
 
-/* 
+/*
     -- Table of Content --
 
     * # Preloader
@@ -18,8 +18,11 @@
     * Responsive
 
 */
-*{
+/* *{
     transition: all 2s ease;
+} */
+.transition-theme{
+  transition: all 2s ease;
 }
 :root {
     --primary_color: #5B78F6;
@@ -184,7 +187,7 @@ ol {
     opacity: 0;
     position: absolute;
     z-index: 9;
-    
+
 }
 .credential-area .credential-sidebar .bg-img,
 .contact-area .contact-form .bg-img,
@@ -516,7 +519,7 @@ ol {
 }
 
 .marquee div {
-    
+
     position: absolute;
     white-space: nowrap;
     will-change: transform;
@@ -1469,7 +1472,7 @@ ol {
 
 
 @keyframes marquee {
-    
+
     from { transform: translateX(0); }
     to { transform: translateX(-65.3%); }
 }
@@ -1903,7 +1906,7 @@ ol {
         width: 70px;
         height: 70px;
     }
-    
+
 }
 @media (max-width: 425px) {
     .about-area .about-me-box .infos h1 {

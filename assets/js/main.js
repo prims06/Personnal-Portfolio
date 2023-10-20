@@ -39,23 +39,57 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//Local Storage for saving saving theme file
+function setTheme(isDark){
+  localStorage.setItem("fileUrl", isDark?"./assets/css/style.css":"./assets/css/style-light.css")
+  return getTheme()
+}
+function getTheme(){
+ return localStorage.getItem('fileUrl')
+}
+
+
+
 
 
 // Sélectionnez le bouton et les liens vers les fichiers CSS
 const changeStyleButton = document.getElementById('changeStyleButton');
 const styleLink = document.getElementById('styleLink');
-const initStyle = './assets/css/style.css';
-styleLink.setAttribute('href', initStyle)
+
+// Attendez que le document soit prêt
+document.addEventListener("DOMContentLoaded", function () {
+  const initStyle = getTheme()==null?setTheme(true):getTheme();
+  styleLink.setAttribute('href', initStyle)
+});
+
 // Gérez le clic sur le bouton
 changeStyleButton.addEventListener('click', () => {
   // Déterminez quelle feuille de style est actuellement active
   const currentStyle = styleLink.getAttribute('href');
 
-  // Déterminez quelle feuille de style doit être activée
-  const newStyle = currentStyle === './assets/css/style-light.css' ? './assets/css/style.css' : './assets/css/style-light.css';
+  const allElements = document.querySelectorAll('*');
+
+  // Parcourez tous les éléments et ajoutez la classe de transition à chacun d'eux
+  allElements.forEach((element) => {
+    element.classList.add('transition-theme');
+  });
+
+  // Attendez un certain temps (2 secondes) pour que la transition ait lieu
+  setTimeout(() => {
+    // Parcourez à nouveau tous les éléments et supprimez la classe de transition
+    allElements.forEach((element) => {
+      element.classList.remove(' \transition-theme');
+    });
+  }, 2000); //
+
+  // // Déterminez quelle feuille de style doit être activée
+  // const newStyle = currentStyle === './assets/css/style-light.css' ? './assets/css/style.css' : './assets/css/style-light.css';
 
   // Changez la feuille de style active en modifiant l'attribut href
   setTimeout(()=>{
-    styleLink.setAttribute('href', newStyle);
+    styleLink.setAttribute('href', currentStyle === './assets/css/style-light.css'?setTheme(true):setTheme(false));
   }, 500)
 });
+
+
+
