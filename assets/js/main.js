@@ -23,6 +23,7 @@ var div = document.createElement("div");
     div.className="preloader",
     div.innerHTML='<div class="black_wall"></div><div class="loader"></div>',
     document.body.insertBefore(div,document.body.firstChild),window.onload=function() {
+      styleLink.setAttribute('href', getTheme())
     document.getElementById("preloader").classList.add("off")
 };
 
@@ -62,8 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   styleLink.setAttribute('href', initStyle)
 });
 
-// Gérez le clic sur le bouton
-changeStyleButton.addEventListener('click', () => {
+const switchTheme=() => {
   // Déterminez quelle feuille de style est actuellement active
   const currentStyle = styleLink.getAttribute('href');
 
@@ -78,7 +78,7 @@ changeStyleButton.addEventListener('click', () => {
   setTimeout(() => {
     // Parcourez à nouveau tous les éléments et supprimez la classe de transition
     allElements.forEach((element) => {
-      element.classList.remove(' \transition-theme');
+      element.classList.remove('transition-theme');
     });
   }, 2000); //
 
@@ -89,7 +89,11 @@ changeStyleButton.addEventListener('click', () => {
   setTimeout(()=>{
     styleLink.setAttribute('href', currentStyle === './assets/css/style-light.css'?setTheme(true):setTheme(false));
   }, 500)
-});
+}
+
+
+// Gérez le clic sur le bouton
+changeStyleButton.addEventListener('click', switchTheme);
 
 
 
