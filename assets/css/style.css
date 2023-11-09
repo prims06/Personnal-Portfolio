@@ -133,6 +133,7 @@ ol {
     border-radius: 16px;
     font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
     padding: 12px 30px;
 }
 .theme-btn:hover {
@@ -909,6 +910,7 @@ ol {
 }
 .credential-area .credential-sidebar .theme-btn {
     width: 100%;
+    cursor: pointer;
 }
 
 

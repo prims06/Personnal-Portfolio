@@ -63,7 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
   styleLink.setAttribute('href', initStyle)
 });
 
-const switchTheme=() => {
+// const btnsToggle = document.querySelectorAll('.toggle-theme');
+
+// btnsToggle.forEach(e=>{
+//   e.addEventListener('click', switchTheme())
+// })
+
+function switchTheme(){
   // Déterminez quelle feuille de style est actuellement active
   const currentStyle = styleLink.getAttribute('href');
 
@@ -87,7 +93,7 @@ const switchTheme=() => {
 
   // Changez la feuille de style active en modifiant l'attribut href
   setTimeout(()=>{
-    styleLink.setAttribute('href', currentStyle === './assets/css/style-light.css'?setTheme(true):setTheme(false));
+    styleLink.setAttribute('href', currentStyle === './assets/css/style.css'?setTheme(false):setTheme(true));
   }, 500)
 }
 
