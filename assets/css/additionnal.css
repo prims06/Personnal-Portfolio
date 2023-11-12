@@ -1,0 +1,12 @@
+/* Additionnal CSS */
+
+.tech-list{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 0px 0px;
+}
+.tech-list i{
+  margin-right: 10px;
+  font-size: 20px;
+}
