@@ -767,7 +767,7 @@ ol {
     margin-bottom: 13px;
 }
 .project-details-wrap .project-details-2-img {
-    height: 400px;
+    height: auto;
     border-radius: 30px;
 }
 .project-details-wrap .project-details-3-img img,
@@ -779,7 +779,7 @@ ol {
     border-radius: 30px;
 }
 .project-details-wrap .project-details-3-img {
-    height: 480px;
+    height: auto;
     position: relative;
     border-radius: 30px;
 }

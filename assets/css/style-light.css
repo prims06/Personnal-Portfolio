@@ -740,7 +740,7 @@ ol {
     border-radius: 30px;
 }
 .project-details-wrap .project-details-3-img {
-    height: 480px;
+    height: auto;
     position: relative;
     border-radius: 30px;
 }
