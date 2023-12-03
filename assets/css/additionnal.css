@@ -74,8 +74,8 @@ left: 0;
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 20%;
-  right: 10%;
+  bottom: 10%;
+  right: 5%;
   border-radius: 50%;
 }
 .download-box i{
