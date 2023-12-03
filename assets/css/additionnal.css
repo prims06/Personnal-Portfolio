@@ -66,3 +66,19 @@ left: 0;
 .tools-list img{
   width: 30px;
 }
+
+.download-box{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20%;
+  right: 10%;
+  border-radius: 50%;
+}
+.download-box i{
+  font-size: 40px;
+  font-weight: 900;
+}

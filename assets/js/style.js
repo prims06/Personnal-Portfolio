@@ -1,6 +1,6 @@
 const styleLink = document.getElementById('styleLink');
 const fileUrl = localStorage.getItem('fileUrl');
-const defaultUrl = './assets/css/style-light.css';
+const defaultUrl = './assets/css/style.css';
 const changeStyleButton = document.getElementById('changeStyleButton');
 
 
