@@ -1875,7 +1875,8 @@ ol {
     }
     .project-details-wrap .project-details-3-img,
     .project-details-wrap .project-details-2-img {
-        height: 250px;
+        /* height: 250px; */
+        margin-top: 10px;
     }
     .project-details-wrap .row .col-md-6:first-child .project-details-3-img {
         margin-bottom: 24px;
