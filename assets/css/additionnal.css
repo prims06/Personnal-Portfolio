@@ -1,0 +1,84 @@
+.modal-bloc{
+  z-index: 5000;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+}
+.modal-bloc-content{
+  position: absolute;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  transition: opacity 3s ease-in-out;
+}
+
+.btn-close{
+  padding: 20px;
+  background: rgb(241, 12, 12);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+}
+.btn-left{
+  position: absolute;
+left: 0;
+}
+.btn-right{
+  position: absolute;
+  right: 0;
+}
+.btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6000;
+  padding: 20px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #BCBCBC;
+}
+.btn img{
+  width: 80px;
+}
+
+.details-project-img{
+  cursor: pointer;
+}
+
+.tools-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tools-list img{
+  width: 30px;
+}
+
+.download-box{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  border-radius: 50%;
+}
+.download-box i{
+  font-size: 40px;
+  font-weight: 900;
+}
